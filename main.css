@@ -18,9 +18,12 @@ body {
     margin: 0;
     padding: 0;
     transition: 1s;
+    border-left: 1px solid rgba(0, 0, 0, 0.8);
+    /* border-right: 1px solid rgba(0, 0, 0, 0.8); */
+    overflow: hidden;
 }
 
-.is-showing {
+.category-is-showing {
     height: 100%;
     width: 85%;
     margin: 0;
@@ -29,52 +32,56 @@ body {
 }
 
 .accueil {
-    background: green;
+    background: #2171b5;
 }
 
 .services {
-    background: greenyellow;
+    background: #4292c6;
 }
 
-.news {
-    background: yellow;
+.tarifs {
+    background: #6baed6;
 }
 
 .logiciels {
-    background: orange;
+    background: #9ecae1;
 }
 
-.infos {
-    background: orangered;
+.news {
+    background: #c6dbef;
 }
 
 .contact {
-    background: red;
+    background: #deebf7;  
 }
 
 nav {
     display: flex;
+    transform: rotateZ(90deg);
+    transition: .3s;
 }
 
 ul {
+    opacity: 0;
+    display: none;
     margin: 0;
     padding: 0 0 0 2rem;
-    display: flex;
     list-style: none;
+    transition: 1s;
 }
 
 li {
-    justify-content: center;
+    height: 100%;
+    display: inline-block;
 }
 
 h2 {
     padding: 1rem 0 1rem 0;
     margin: 0;
+    font-size: 2rem;
     color: white;
-    transform: rotateZ(90deg);
     text-transform: uppercase;
     padding-left: 1rem;
-    transition: .3s;
 }
 
 h3 {
@@ -85,32 +92,40 @@ h3 {
     border-top-right-radius: 1rem;
     border-bottom-left-radius: -1rem;
     border-bottom-right-radius: -1rem;
-    margin: 1rem 0 0 0;
-    height: calc(100% - 1rem);
+    margin: 2rem 0 0 0;
+    height: calc(100% - 2rem);
     box-sizing: border-box;
 }
 
-.is-active {
+.nav-is-active {
     transform: rotateZ(0deg);
     transition: .3s;
 }
 
 .wraper {
+    display: none;
+    opacity: 0;
     width: 100%;
-    height: 80%;
+    height: 90%;
+    transition: 1s;
 }
 
 .tab {
     display: none;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
-.tab-is-showing {
+.is-showing {
     display: block;
 }
 
+.fade-in {
+    opacity: 1;
+    transition: 1s;
+}
+
 .tab-is-active {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
